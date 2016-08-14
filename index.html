@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <!-- Load dependent stylesheets. -->
+    <link rel="stylesheet" href="dist/video-js.css" >
+    <link rel="stylesheet" href="dist/videojs.ima.css" />
+  </head>
+
+  <body>
+    <form id="main-form">
+      <input id="ad-tag-url">
+      <input type="submit" value="Go">
+    </form>
+    <video id="content_video" class="video-js vjs-default-skin"
+        controls preload="auto">
+      <source src="https://www.apple.com/media/us/watch/2015/a718f271_b19c_47d8_928d_d108fc5d702a/tour/design/watch-design-cc-us-20140909_1280x720h.mp4" type="video/mp4" />
+    </video>
+    <!-- Load dependent scripts -->
+    <script src="dist/video.js"></script>
+    <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script src="dist/videojs.ads.js"></script>
+    <script src="dist/videojs.ima.js"></script>
+    <script src="player.js"></script>
+  </body>
+</html>

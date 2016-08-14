@@ -1,0 +1,46 @@
+{
+  "name": "videojs-ima-tester",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "copy": "npm run copy-videojs && npm run copy-videojs-contrib-ads && npm run copy-videojs-ima",
+    "copy-videojs": "cp -f ./node_modules/video.js/dist/video.js ./dist/video.js && cp -f ./node_modules/video.js/dist/video-js.css ./dist/video-js.css",
+    "copy-videojs-contrib-ads": "cp -f ./node_modules/videojs-contrib-ads/dist/videojs.ads.js ./dist/videojs.ads.js",
+    "copy-videojs-ima": "cp -f ./node_modules/videojs-ima/src/videojs.ima.js ./dist/videojs.ima.js && cp -f ./node_modules/videojs-ima/src/videojs.ima.css ./dist/videojs.ima.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kahwee/videojs-ima-tester.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "videojs-ima": "^0.4.0"
+  },
+  "standard": {
+    "ignore": [
+      "scripts/**",
+      "dist/**",
+      "build/**",
+      "coverage/**",
+      "lib/**"
+    ],
+    "globals": [
+      "after",
+      "localStorage",
+      "describe",
+      "it",
+      "expect",
+      "Image",
+      "td",
+      "Event",
+      "before"
+    ]
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0"
+  }
+}
