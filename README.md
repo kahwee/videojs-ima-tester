@@ -1,9 +1,18 @@
 # videojs-ima-tester
 
-The intention of this page is test out Google IMA. 
+Historical browser form for testing a VAST ad tag with Video.js and Google IMA.
 
-A valid VAST Tag to test on is:
+## Build assets and run
 
+```sh
+npm install
+npm run copy
+python3 -m http.server 8000
 ```
-https://s3.amazonaws.com/animate-vpaid-bridge/sample-1.xml
-```
+
+Open `http://localhost:8000`, paste an ad-tag URL into the form, and submit it.
+`copy` copies Video.js, videojs-contrib-ads, and videojs-ima assets into `dist/`.
+The form handler is [player.js](player.js).
+
+The bundled integration and remote ad endpoints have not been validated with
+current SDKs. `npm run lint` checks JavaScript; `npm test` is a failing placeholder.
